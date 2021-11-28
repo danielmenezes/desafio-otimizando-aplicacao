@@ -17,9 +17,12 @@ interface ContentProps {
     }>;
     Runtime: string;
   }>;
+
 }
 
 export function Content({ selectedGenre, movies }: ContentProps) {
+  console.log(selectedGenre)
+
   return (
     <div className="container">
       <header>
