@@ -37,5 +37,8 @@ function MovieCardComponent(props: MovieCardProps) {
 }
 
 export const MovieCard = memo(MovieCardComponent, (prevMovie, nextMovie) => {
-  return Object.is(prevMovie, nextMovie);
+  return prevMovie.poster === nextMovie.poster
+    && prevMovie.runtime === nextMovie.runtime
+    && prevMovie.rating === nextMovie.rating
+    && prevMovie.title === nextMovie.title
 })
