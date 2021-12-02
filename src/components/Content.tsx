@@ -21,12 +21,11 @@ interface ContentProps {
 }
 
 export function Content({ selectedGenre, movies }: ContentProps) {
-  console.log(selectedGenre)
 
   return (
     <div className="container">
       <header>
-        <span className="category">Categoria:<span> {selectedGenre.title}</span></span>
+        <span className="category">Categoria:<span> {selectedGenre?.title}</span></span>
       </header>
 
       <main>
@@ -39,3 +38,4 @@ export function Content({ selectedGenre, movies }: ContentProps) {
     </div>
   )
 }
+
